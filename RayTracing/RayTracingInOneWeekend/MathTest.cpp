@@ -18,9 +18,8 @@ vec3 TestAdd(vec3 &v0,vec3 &v1)
 }
 vec3 TestMutiply(vec3 &v0,double t)
 {
-	return v0 *= t;
-	cout << v0;
-	return v0;
+	cout << v0 * t;
+	return v0 * t;
 }
 
 void MathTest()

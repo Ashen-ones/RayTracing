@@ -18,14 +18,14 @@ public:
 	double x() const { return e[0]; }
 	double y() const { return e[1]; }
 	double z() const { return e[2]; }
-	vec3 operator-() const { return vec3(-e[0], e[1], -e[2]); }
+	vec3 operator-() const { return vec3(-e[0], -e[1], -e[2]); }
 	double operator[](int i)const { return e[i]; }
 
 	vec3& operator+=(const vec3& v)
 	{
 		e[0] += v.e[0];
 		e[1] += v.e[1];
-		e[2] += v.e[2];
+		e[2] += v.e[2];//
 		return *this;
 	}
 
@@ -47,13 +47,13 @@ public:
 		return *this *= 1 / t;
 	}
 
-	double length() const
+	double length_squared() const
 	{
 		return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
 	}
-	double length_squared() const
+	double length() const
 	{
-		return std::sqrt(this->length());
+		return std::sqrt(this->length_squared());
 	}
 	double e[3];
 private:
@@ -65,19 +65,29 @@ using color = vec3;
 
 inline vec3 operator+(const vec3& u, const vec3& v)
 {
-	return vec3(u[0]+v[0], u[1] + v[1], u[2] + v[2]);
+	return vec3(u.e[0] + v.e[0], u.e[1] + v.e[1], u.e[2] + v.e[2]);
 }
 inline vec3 operator-(const vec3& u, const vec3& v)
 {
-	return u+(-v);
-}
-
-inline double dot(const vec3& u, const vec3& v)
-{
-	return u[0] * v[0] + u[1] * v[1] + u[2] * v[2];
+	auto value0 = u + (-v);
+	auto value1 = vec3(u.e[0] - v.e[0], u.e[1] - v.e[1], u.e[2] - v.e[2]);
+	return  u + ( - v);
+	return vec3(u.e[0] - v.e[0], u.e[1] - v.e[1], u.e[2] - v.e[2]);
 }
 
 inline vec3 operator*(const vec3& u, const double t)
 {
-	return u * t;
+	return vec3(t * u.e[0], t * u.e[1], t * u.e[2]);
+}
+
+inline vec3 operator*( const double t, const vec3& u)
+{
+	return vec3(t * u.e[0], t * u.e[1], t * u.e[2]);
+}
+
+inline vec3 operator/(vec3 v, double t) {
+	return (1 / t) * v;
+}
+inline vec3 unit_vector(vec3 v) {
+	return v / v.length();
 }

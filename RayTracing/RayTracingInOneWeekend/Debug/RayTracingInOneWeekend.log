@@ -1,2 +1,7 @@
-﻿  main.cpp
+﻿  GetImage.cpp
+  main.cpp
+  MathTest.cpp
+  ray.cpp
+  vec3.cpp
+  正在生成代码...
   RayTracingInOneWeekend.vcxproj -> D:\AshenOneProject\RayTracing\RayTracing\Debug\RayTracingInOneWeekend.exe

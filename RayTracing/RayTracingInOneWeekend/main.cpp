@@ -4,14 +4,31 @@
 #include "ray.h"
 using namespace std;
 
+bool hit_sphere(const point3& center, double radius, const ray& r)
+{
+	vec3 oc = r.origin() - center;
+	auto a = dot(r.direction(), r.direction());
+	auto b = 2.0 * dot(r.direction(), oc);
+	auto c = dot(oc, oc) - radius * radius;
+	double discriminant = (b * b - 4 * a * c);
+	//std::cerr << "\rScanlines remaining: " << discriminant << ' ' << std::flush;
+	return discriminant > 0;
+}
+
 color RayColor(const ray& r)
 {
-	//除以长度的坐标
+	if (hit_sphere(point3(0, 0, -1), 0.3, r))
+	{
+		return color(1, 0, 0);
+	}
+	//除以长度的坐标 
 	vec3 unitDir = unit_vector(r.direction());
 	//根据y轴计算一个色彩出来，之后可以直接看效果
+
 	auto t = 0.5 * (unitDir.y() + 1.0);
 	return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
 }
+
 
 int main()
 {
@@ -32,7 +49,6 @@ int main()
 	auto horizontal = vec3(viewWidth, 0, 0);
 	auto vertical = vec3(0, viewportHeight, 0);
 	auto lowerLeftCorner = origin - horizontal / 2 - vertical / 2 - vec3(0, 0, focalLength);
-
 
 	//固定格式
 	std::cout<< "P3\n" << imageWidth<<" "<< imageHeight << "\n255\n";

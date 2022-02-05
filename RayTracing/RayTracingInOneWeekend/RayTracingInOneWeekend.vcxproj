@@ -72,6 +72,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\AshenOneProject\RayTracing\Third\use\glad\include;D:\AshenOneProject\RayTracing\Third\use\glfw\include;D:\AshenOneProject\RayTracing\Third\use\glutdlls37beta;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\AshenOneProject\RayTracing\Third\use\glfw\lib;D:\AshenOneProject\RayTracing\Third\use\glutdlls37beta;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>D:\AshenOneProject\RayTracing\Third\use\glutdlls37beta;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -88,11 +91,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\AshenOneProject\RayTracing\Third\use\glutdlls37beta;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\AshenOneProject\RayTracing\Third\glutdlls37beta;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "..\..\Third\use\glutdlls37beta\glut32.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -139,16 +148,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Third\use\glad\src\glad.c" />
     <ClCompile Include="GetImage.cpp" />
+    <ClCompile Include="gltest.cpp" />
+    <ClCompile Include="gluttest.cpp" />
+    <ClCompile Include="hittable.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MathTest.cpp" />
     <ClCompile Include="ray.cpp" />
+    <ClCompile Include="sphere.cpp" />
     <ClCompile Include="vec3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="color.h" />
     <ClInclude Include="GetImage.h" />
+    <ClInclude Include="gltest.h" />
+    <ClInclude Include="gluttest.h" />
+    <ClInclude Include="hittable.h" />
     <ClInclude Include="ray.h" />
+    <ClInclude Include="sphere.h" />
     <ClInclude Include="vec3.h" />
     <ClInclude Include="MathTest.h" />
   </ItemGroup>

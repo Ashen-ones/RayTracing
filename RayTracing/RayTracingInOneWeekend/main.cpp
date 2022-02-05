@@ -2,40 +2,39 @@
 #include "vec3.h"
 #include "color.h"
 #include "ray.h"
+#include "sphere.h"
+#include <GLFW/glfw3.h>
+#include <glut.h>
+#include <gl/GL.h>
+#include "gluttest.h"
+
+
 using namespace std;
 
-bool hit_sphere(const point3& center, double radius, const ray& r)
-{
-	vec3 oc = r.origin() - center;
-	auto a = dot(r.direction(), r.direction());
-	auto b = 2.0 * dot(r.direction(), oc);
-	auto c = dot(oc, oc) - radius * radius;
-	double discriminant = (b * b - 4 * a * c);
-	//std::cerr << "\rScanlines remaining: " << discriminant << ' ' << std::flush;
-	return discriminant > 0;
-}
-
-color RayColor(const ray& r)
-{
-	if (hit_sphere(point3(0, 0, -1), 0.3, r))
-	{
-		return color(1, 0, 0);
+color RayColor(const ray& r) {
+	auto s0 = sphere(point3(0, 0, -1), 0.5);
+	auto s1 = sphere(point3(-1, 0, -3), 0.5);
+	hit_record hr;
+	hit_record hr1;
+	//std::cerr << "\rScanlines remaining: " << t << ' ' << std::flush;
+	if (s0.Hit(r, -1000, +1000, hr)) {
+		auto hitPoint = hr.p;
+		vec3 N = hr.normal;
+		return 0.5 * (hr.normal + color(1, 1, 1));
 	}
-	//除以长度的坐标 
-	vec3 unitDir = unit_vector(r.direction());
-	//根据y轴计算一个色彩出来，之后可以直接看效果
-
-	auto t = 0.5 * (unitDir.y() + 1.0);
+	if (s1.Hit(r, -100, +100, hr1)) {
+		auto hitPoint = hr1.p;
+		vec3 N = hr1.normal;
+		return 0.5 * (hr1.normal + color(1, 1, 1));
+	}
+	vec3 unit_direction = unit_vector(r.direction());
+	auto t = 0.5 * (unit_direction.y() + 1.0);
 	return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
 }
 
 
-int main()
+int main(int argc, char* argv[])
 {
-	//void MathTest();
-	//MathTest();
-	//return 0;
-
 	const auto aspectRatio = 16.0 / 9.0;
 	const int imageWidth = 400;
 	const int imageHeight = static_cast<int>(imageWidth/aspectRatio);
@@ -50,8 +49,9 @@ int main()
 	auto vertical = vec3(0, viewportHeight, 0);
 	auto lowerLeftCorner = origin - horizontal / 2 - vertical / 2 - vec3(0, 0, focalLength);
 
-	//固定格式
-	std::cout<< "P3\n" << imageWidth<<" "<< imageHeight << "\n255\n";
+	gluttest glut = gluttest(imageWidth, imageHeight,argc,argv);
+	glut.GlutInit();
+
 	for (int j = imageHeight - 1; j >= 0; --j)
 	{
 		for (int i = 0; i < imageWidth; ++i) {
@@ -59,10 +59,13 @@ int main()
 				auto u = double(i) / (imageWidth - 1);
 				auto v = double(j) / (imageHeight - 1);
 				ray r(origin, lowerLeftCorner + u * horizontal + v * vertical - origin);
-				color pixelCoor = RayColor(r);
-				//std::cout << pixelCoor<<endl;
-				WriteColor(std::cout, pixelCoor);
+				color pixelColor = RayColor(r);
+				int pos = (j * imageWidth + i) * 3;
+				gluttest::PixelBuffer[pos] = pixelColor.x()*255.999;
+				gluttest::PixelBuffer[pos + 1] = pixelColor.y()*255.999;
+				gluttest::PixelBuffer[pos + 2] = pixelColor.z()*255.999;
 			}
 		}
 	}
+	glut.GlutMainLoop();
 }

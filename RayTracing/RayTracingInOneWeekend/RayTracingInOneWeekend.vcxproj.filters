@@ -30,6 +30,21 @@
     <ClCompile Include="ray.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="hittable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sphere.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Third\use\glad\src\glad.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gltest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gluttest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GetImage.h">
@@ -45,6 +60,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ray.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hittable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gltest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gluttest.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

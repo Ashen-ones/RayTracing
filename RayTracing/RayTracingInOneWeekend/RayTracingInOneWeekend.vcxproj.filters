@@ -45,6 +45,12 @@
     <ClCompile Include="gluttest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="HitTableList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Camear.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GetImage.h">
@@ -72,6 +78,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="gluttest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HitTableList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RTWeekend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

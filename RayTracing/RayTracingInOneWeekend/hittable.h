@@ -6,6 +6,12 @@ struct hit_record
 	point3 p;
 	vec3 normal;
 	double t;
+	bool front_face;
+	//计算是正面还是反面
+	inline void SetFaceNormal(const ray& r, const vec3& outward_normal) {
+		front_face = dot(r.direction(), outward_normal) < 0;
+		normal = front_face ? outward_normal : -outward_normal;
+	}
 };
 
 class hittable

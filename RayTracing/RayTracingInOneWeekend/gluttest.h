@@ -7,12 +7,10 @@ public:
 	static int WIDTH;
 	static int HEIGNT;
 	static GLubyte* PixelBuffer;
-
 public:
 	int argc;
 	char* argv[];
 	static void display();
-
 public:
 	gluttest(int w, int h,int ac,char* av[]);
 	void GlutInit();

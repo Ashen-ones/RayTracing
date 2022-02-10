@@ -1,5 +1,4 @@
 #include "gluttest.h"
-
 int gluttest::WIDTH = 0;
 int gluttest::HEIGNT = 0;
 GLubyte* gluttest::PixelBuffer;
@@ -12,7 +11,6 @@ GLubyte* gluttest::PixelBuffer;
 	 argc = ac;
 
  }
-
 void gluttest::GlutInit()
 {
 	char* argv[] = {(char*)"", nullptr};
@@ -31,13 +29,10 @@ void gluttest::GlutEnd()
 {
 
 }
-
 void gluttest::display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glDrawPixels(gluttest::WIDTH, gluttest::HEIGNT, GL_RGB, GL_UNSIGNED_BYTE, PixelBuffer);
 	glutSwapBuffers();
 }
-
-
 

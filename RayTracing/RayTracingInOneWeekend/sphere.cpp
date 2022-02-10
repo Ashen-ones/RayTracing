@@ -1,5 +1,11 @@
 #include "sphere.h"
- bool sphere::Hit(const ray& r, double tMin, double tMax, hit_record& rec)const
+
+sphere::sphere()
+{
+
+}
+
+bool sphere::Hit(const ray& r, double tMin, double tMax, hit_record& rec)const
 {
 	vec3 oc = r.origin() - center;
 	auto a = r.direction().length_squared();
@@ -25,6 +31,7 @@
 	rec.t = root;
 	rec.p = r.at(rec.t);
 	rec.normal = (rec.p - center) / radius;
-
+	vec3 outwardNormal = (rec.p - center) / radius;
+	rec.SetFaceNormal(r, outwardNormal);
 	return true;
 }

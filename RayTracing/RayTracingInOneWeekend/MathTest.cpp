@@ -1,4 +1,4 @@
-#include "vec3.h"
+#include "RTWeekend.h"
 #include <iostream>
 #include "MathTest.h"
 using namespace std;

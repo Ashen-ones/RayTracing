@@ -21,9 +21,6 @@
     <ClCompile Include="GetImage.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vec3.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="MathTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -49,6 +46,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Camear.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="vec3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

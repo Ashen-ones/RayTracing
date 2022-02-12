@@ -1,5 +1,5 @@
 #pragma once
-#include "vec3.h"
+#include "RTWeekend.h"
 void WriteColor(std::ostream& out, color pixColor)
 {
 	out << static_cast<int>(255.999 * pixColor.x()) << " "

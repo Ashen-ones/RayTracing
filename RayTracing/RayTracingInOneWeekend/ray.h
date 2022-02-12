@@ -1,4 +1,5 @@
 #pragma once
+#include "RTWeekend.h"
 #include "vec3.h"
 class ray
 {
@@ -16,4 +17,3 @@ public:
 	point3 orig;
 	vec3 dir;
 };
-

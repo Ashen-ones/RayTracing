@@ -5,6 +5,9 @@
 #include "gluttest.h"
 #include "HitTableList.h"
 #include "Camera.h"
+#include "material.h"
+#include "lambertian.h"
+#include "metal.h"
 
 using namespace std;
 
@@ -18,13 +21,17 @@ color RayColor(const ray& r,const HitTableList& world,int depth) {
 	hit_record rec;
 	if (world.Hit(r, 0.0001, infinity, rec))
 	{
-		point3 target = rec.p + rec.normal + random_unit_vector();
-		auto c = 0.5 * RayColor(ray(rec.p, target - rec.p), world, --depth);
-		return c;
+		ray scattered;
+		color attenuation;
+		if (rec.mat_ptr->scatter(r, rec, attenuation, scattered))
+		{
+			return attenuation * RayColor(scattered, world, depth - 1);
+		}
+		return color(0, 0, 0);
 	}
 	vec3 unit_direction = unit_vector(r.direction());
 	auto t = 0.5 * (unit_direction.y() + 1.0);
-	return (1.0 - t) * color(1, 1, 1) + t * color(0.8, 0.3, 1.0);
+	return (1.0 - t) * color(1, 1, 1) + t * color(0.6, 0.7, 1.0);
 }
 
 int main(int argc, char* argv[])
@@ -33,15 +40,25 @@ int main(int argc, char* argv[])
 	const int imageWidth = 400;
 	const int imageHeight = static_cast<int>(imageWidth/aspectRatio);
 	int depth = 15;
-	int sample = 200;
+	int sample = 100;
 	//eyes
 	Camera camera;
 
 	gluttest glut = gluttest(imageWidth, imageHeight,argc,argv);
 	glut.GlutInit();
 	HitTableList world;
-	world.add(make_shared<sphere>(point3(0, 0, -1), 0.5));
-	world.add(make_shared<sphere>(point3(0, -100.5, -1), 100));
+	auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
+	auto material_center = make_shared<lambertian>(color(0.7, 0.3, 0.3));
+
+	auto material_left = make_shared<metal>(color(0.8, 0.8, 0.8));
+	auto material_right = make_shared<metal>(color(0.8, 0.6, 0.2));
+
+	world.add(make_shared<sphere>(point3(0.0, -100.5, -5.0), 100.0, material_ground));
+	world.add(make_shared<sphere>(point3(0.0, 0.0, -5.0), 0.5, material_center));
+	world.add(make_shared<sphere>(point3(-1.0, 0.0, -5.0), 0.5, material_left));
+	world.add(make_shared<sphere>(point3(1.0, 0.0, -5.0), 0.5, material_right));
+	world.add(make_shared<sphere>(point3(0.0, 1.0, -5.0), 0.5, material_right));
+
 
 	for (int j = imageHeight - 1; j >= 0; --j)
 	{

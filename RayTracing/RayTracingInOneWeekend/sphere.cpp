@@ -33,5 +33,6 @@ bool sphere::Hit(const ray& r, double tMin, double tMax, hit_record& rec)const
 	rec.normal = (rec.p - center) / radius;
 	vec3 outwardNormal = (rec.p - center) / radius;
 	rec.SetFaceNormal(r, outwardNormal);
+	rec.mat_ptr = mat_ptr;
 	return true;
 }

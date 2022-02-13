@@ -9,7 +9,6 @@ int length(T& arr)
 	return sizeof(arr) / sizeof(arr[0]);
 }
 
-
 vec3 TestAdd(vec3 &v0,vec3 &v1)
 {
 	v0 += v1;

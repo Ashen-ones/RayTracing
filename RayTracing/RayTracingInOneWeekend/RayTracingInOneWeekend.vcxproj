@@ -150,12 +150,14 @@
   <ItemGroup>
     <ClCompile Include="..\..\Third\use\glad\src\glad.c" />
     <ClCompile Include="Camear.cpp" />
+    <ClCompile Include="dielectric.cpp" />
     <ClCompile Include="GetImage.cpp" />
     <ClCompile Include="gltest.cpp" />
     <ClCompile Include="gluttest.cpp" />
     <ClCompile Include="hittable.cpp" />
     <ClCompile Include="HitTableList.cpp" />
     <ClCompile Include="lambertian.cpp" />
+    <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="material.cpp" />
     <ClCompile Include="MathTest.cpp" />
@@ -167,12 +169,14 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="color.h" />
+    <ClInclude Include="dielectric.h" />
     <ClInclude Include="GetImage.h" />
     <ClInclude Include="gltest.h" />
     <ClInclude Include="gluttest.h" />
     <ClInclude Include="hittable.h" />
     <ClInclude Include="HitTableList.h" />
     <ClInclude Include="lambertian.h" />
+    <ClInclude Include="logger.h" />
     <ClInclude Include="material.h" />
     <ClInclude Include="metal.h" />
     <ClInclude Include="ray.h" />

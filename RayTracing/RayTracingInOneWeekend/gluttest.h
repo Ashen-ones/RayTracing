@@ -9,7 +9,6 @@ public:
 	static GLubyte* PixelBuffer;
 public:
 	int argc;
-	char* argv[];
 	static void display();
 public:
 	gluttest(int w, int h,int ac,char* av[]);

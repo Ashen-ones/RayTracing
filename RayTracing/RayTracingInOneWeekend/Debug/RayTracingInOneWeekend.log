@@ -1,5 +1,3 @@
 ﻿  main.cpp
-D:\AshenOneProject\RayTracing\RayTracing\RayTracingInOneWeekend\gluttest.h(12,8): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
-D:\AshenOneProject\RayTracing\RayTracing\RayTracingInOneWeekend\gluttest.h(12,8): message : 默认构造函数或 copy/move 赋值运算符将忽略此成员
   RayTracingInOneWeekend.vcxproj -> D:\AshenOneProject\RayTracing\RayTracing\Debug\RayTracingInOneWeekend.exe
   复制了 0 个文件

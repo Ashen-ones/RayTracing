@@ -24,22 +24,22 @@
     <ClCompile Include="MathTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ray.cpp">
+    <ClCompile Include="Ray.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="hittable.cpp">
+    <ClCompile Include="Hittable.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="sphere.cpp">
+    <ClCompile Include="Sphere.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Third\use\glad\src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="gltest.cpp">
+    <ClCompile Include="Gltest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="gluttest.cpp">
+    <ClCompile Include="Gluttest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="HitTableList.cpp">
@@ -48,19 +48,19 @@
     <ClCompile Include="Camear.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vec3.cpp">
+    <ClCompile Include="Vec3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="material.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="lambertian.cpp">
+    <ClCompile Include="Lambertian.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="metal.cpp">
+    <ClCompile Include="Metal.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="dielectric.cpp">
+    <ClCompile Include="Dielectric.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="logger.cpp">
@@ -71,28 +71,28 @@
     <ClInclude Include="GetImage.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="vec3.h">
+    <ClInclude Include="Vec3.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MathTest.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="color.h">
+    <ClInclude Include="Color.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ray.h">
+    <ClInclude Include="Ray.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="hittable.h">
+    <ClInclude Include="Hittable.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="sphere.h">
+    <ClInclude Include="Sphere.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="gltest.h">
+    <ClInclude Include="Gltest.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="gluttest.h">
+    <ClInclude Include="Gluttest.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="HitTableList.h">
@@ -104,16 +104,16 @@
     <ClInclude Include="Camera.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="material.h">
+    <ClInclude Include="Material.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="lambertian.h">
+    <ClInclude Include="Lambertian.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="metal.h">
+    <ClInclude Include="Metal.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="dielectric.h">
+    <ClInclude Include="Dielectric.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="logger.h">

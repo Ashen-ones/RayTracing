@@ -44,6 +44,6 @@ inline int random_int(int min, int max) {
 
 // Common Headers
 
-#include "ray.h"
-#include "vec3.h"
+#include "Ray.h"
+#include "Vec3.h"
 

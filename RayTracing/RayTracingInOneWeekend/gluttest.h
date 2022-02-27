@@ -1,6 +1,6 @@
 #pragma once
 #include <glut.h>
-class gluttest
+class Gluttest
 {
 public:
 
@@ -11,7 +11,7 @@ public:
 	int argc;
 	static void display();
 public:
-	gluttest(int w, int h,int ac,char* av[]);
+	Gluttest(int w, int h,int ac,char* av[]);
 	void GlutInit();
 	void GlutMainLoop();
 	void GlutEnd();

@@ -1,13 +1,13 @@
-#include "sphere.h"
+#include "Sphere.h"
 
-sphere::sphere()
+Sphere::Sphere()
 {
 
 }
 
-bool sphere::Hit(const ray& r, double tMin, double tMax, hit_record& rec)const
+bool Sphere::Hit(const Ray& r, double tMin, double tMax, HitRecord& rec)const
 {
-	vec3 oc = r.origin() - center;
+	Vec3 oc = r.origin() - center;
 	auto a = r.direction().length_squared();
 	auto half_b = dot(oc, r.direction());
 	auto c = oc.length_squared() - radius * radius;
@@ -31,7 +31,7 @@ bool sphere::Hit(const ray& r, double tMin, double tMax, hit_record& rec)const
 	rec.t = root;
 	rec.p = r.at(rec.t);
 	rec.normal = (rec.p - center) / radius;
-	vec3 outwardNormal = (rec.p - center) / radius;
+	Vec3 outwardNormal = (rec.p - center) / radius;
 	rec.SetFaceNormal(r, outwardNormal);
 	rec.mat_ptr = mat_ptr;
 	return true;

@@ -14,7 +14,7 @@ public:
 		
 	GetImage(int width, int height, ImageType iType) : imageW{ width }, imageH{ height }, imageType{ iType }{}
 	void Init();
-	void end();
+	void End();
 	void Input2Txt();
 	void SetHead();
 	void CallCommand();

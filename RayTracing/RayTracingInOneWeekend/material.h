@@ -1,11 +1,11 @@
 #pragma once
-#include "rtweekend.h"
+#include "RTWeekend.h"
 
-struct hit_record;
-class material {
+struct HitRecord;
+class Material {
 public:
-	virtual bool scatter(
-		const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
+	virtual bool Scatter(
+		const Ray& rIn, const HitRecord& rec, color& attenuation, Ray& scattered
 	) const = 0;
 };
 

@@ -1,6 +1,6 @@
-#include "gltest.h"
+#include "Gltest.h"
 #include <iostream>
-void gltest::GlfwInit()
+Gltest::Gltest()
 {
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -9,7 +9,7 @@ void gltest::GlfwInit()
 	//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 }
 
-void gltest::GladInit()
+void Gltest::GladInit()
 {
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
@@ -17,12 +17,12 @@ void gltest::GladInit()
 	}
 }
 
-void gltest::GlInit()
+void Gltest::GlInit()
 {
-	GlfwInit();
+
 }
 
-GLFWwindow* gltest::CreateWindow()
+GLFWwindow* Gltest::CreateWindow()
 {
 	window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
 	if (window == NULL)
@@ -37,22 +37,22 @@ GLFWwindow* gltest::CreateWindow()
 	return window;
 }
 
-void gltest::ReflushWindow(GLFWwindow* window, int width, int height)
+void Gltest::ReflushWindow(GLFWwindow* window, int width, int height)
 {
 	std::cout << "Change Window Size" << std::endl;
 	glViewport(0, 0, width, height);
 }
-void gltest::framebuffer_size_callback(GLFWwindow* window, int width, int height)
+void Gltest::framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
 	ReflushWindow(window, width,height);
 }
-void gltest::GlEnd()
+void Gltest::GlEnd()
 {
 	glDisableVertexAttribArray(0);
 	glfwTerminate();
 }
 
-void gltest::Tick()
+void Gltest::Tick()
 {
 	glfwSwapBuffers(window);
 	glfwPollEvents();

@@ -1,18 +1,18 @@
 #include "HitTableList.h"
 
-HitTableList::HitTableList(shared_ptr<hittable> object)
+HitTableList::HitTableList(shared_ptr<Hittable> object)
 {
-	add(object);
+	Add(object);
 }
 
-void HitTableList::add(shared_ptr<hittable> object)
+void HitTableList::Add(shared_ptr<Hittable> object)
 {
 	objects.push_back(object);
 }
 
-bool HitTableList::Hit(const ray& r, double t_min, double t_max, hit_record& rec) const
+bool HitTableList::Hit(const Ray& r, double t_min, double t_max, HitRecord& rec) const
 {
-	hit_record tempRec;
+	HitRecord tempRec;
 	bool hitAnything = false;
 	auto closetSoFar = t_max;
 

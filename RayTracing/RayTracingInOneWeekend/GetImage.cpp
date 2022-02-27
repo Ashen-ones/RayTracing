@@ -5,7 +5,7 @@ void GetImage::Init()
 {
 
 }
-void GetImage::end()
+void GetImage::End()
 {
 
 }

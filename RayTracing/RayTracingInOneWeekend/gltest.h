@@ -1,10 +1,10 @@
 #pragma once
 #include <glad/glad.h>
 #include<GLFW/glfw3.h>
-class gltest
+class Gltest
 {
 public:
-	gltest() {}
+	Gltest();
 	void GlInit();
 	void GlEnd();
 	GLFWwindow* CreateWindow();
@@ -25,7 +25,6 @@ public:
 		"   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
 		"}\n\0";
 private:
-	void GlfwInit();
 	void GladInit();
 	void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 };

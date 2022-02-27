@@ -1,20 +1,20 @@
 #pragma once
-#include "material.h"
-#include "hittable.h"
-class lambertian : public material
+#include "Material.h"
+#include "Hittable.h"
+class Lambertian : public Material
 {
 public:
-	lambertian(const color& a) : albedo(a) {}
+	Lambertian(const color& a) : albedo(a) {}
 
-	virtual bool scatter(const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered) const override 
+	virtual bool Scatter(const Ray& r_in, const HitRecord& rec, color& attenuation, Ray& scattered) const override 
 	{
-		auto scatter_direction = rec.normal + random_unit_vector();
+		auto scatterDirection = rec.normal + RandomUnitVector();
 
 		// Catch degenerate scatter direction
-		if (scatter_direction.near_zero())
-			scatter_direction = rec.normal;
+		if (scatterDirection.near_zero())
+			scatterDirection = rec.normal;
 
-		scattered = ray(rec.p, scatter_direction);
+		scattered = Ray(rec.p, scatterDirection);
 		attenuation = albedo;
 		return true;
 	}

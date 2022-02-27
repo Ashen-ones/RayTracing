@@ -1,9 +1,9 @@
 #include "gluttest.h"
-int gluttest::WIDTH = 0;
-int gluttest::HEIGNT = 0;
-GLubyte* gluttest::PixelBuffer;
+int Gluttest::WIDTH = 0;
+int Gluttest::HEIGNT = 0;
+GLubyte* Gluttest::PixelBuffer;
 
- gluttest::gluttest(int w, int h, int ac, char* av[])
+ Gluttest::Gluttest(int w, int h, int ac, char* av[])
  {
 	 WIDTH = w;
 	 HEIGNT = h;
@@ -11,28 +11,28 @@ GLubyte* gluttest::PixelBuffer;
 	 argc = ac;
 
  }
-void gluttest::GlutInit()
+void Gluttest::GlutInit()
 {
 	char* argv[] = {(char*)"", nullptr};
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
-	glutInitWindowSize(gluttest::WIDTH, gluttest::HEIGNT);
+	glutInitWindowSize(Gluttest::WIDTH, Gluttest::HEIGNT);
 	glutInitWindowPosition(200, 200);
 	int MainWindow = glutCreateWindow("Hello Graphics!!");
 	glutDisplayFunc(display);
 }
-void gluttest::GlutMainLoop()
+void Gluttest::GlutMainLoop()
 {
 	glutMainLoop();
 }
-void gluttest::GlutEnd()
+void Gluttest::GlutEnd()
 {
 
 }
-void gluttest::display()
+void Gluttest::display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
-	glDrawPixels(gluttest::WIDTH, gluttest::HEIGNT, GL_RGB, GL_UNSIGNED_BYTE, PixelBuffer);
+	glDrawPixels(Gluttest::WIDTH, Gluttest::HEIGNT, GL_RGB, GL_UNSIGNED_BYTE, PixelBuffer);
 	glutSwapBuffers();
 }
 

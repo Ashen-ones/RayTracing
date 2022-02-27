@@ -1,16 +1,16 @@
 #pragma once
 #include "material.h"
 #include "hittable.h"
-class dielectric :public material
+class Dielectric :public Material
 {
 public:
 
-	dielectric(double index_of_refraction) : ir(index_of_refraction) {}
-    bool virtual scatter(const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered) const override;
+	Dielectric(double index_of_refraction) : ir(index_of_refraction) {}
+    bool virtual Scatter(const Ray& r_in, const HitRecord& rec, color& attenuation, Ray& scattered) const override;
 public:
 	double ir; // Index of Refraction
 private:
-	static double reflectance(double cosine, double ref_idx) {
+	static double Reflectance(double cosine, double ref_idx) {
 		// Use Schlick's approximation for reflectance.
 		auto r0 = (1 - ref_idx) / (1 + ref_idx);
 		r0 = r0 * r0;

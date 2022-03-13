@@ -35,4 +35,3 @@ Ray Camera::GetRay(double s, double t) const
 	);
 }
 
-

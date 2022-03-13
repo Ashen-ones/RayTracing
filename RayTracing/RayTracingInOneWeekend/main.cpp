@@ -127,6 +127,7 @@ HitTableList RandomScene() {
 }
 
 
+
 int main(int argc, char* argv[])
 {
 	const auto aspectRatio = 16.0 / 9.0;

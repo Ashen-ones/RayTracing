@@ -1,0 +1,171 @@
+diff --git a/RayTracing/RayTracingInOneWeekend/Camear.cpp b/RayTracing/RayTracingInOneWeekend/Camear.cpp
+index 1241bdb..a37eb4a 100644
+--- a/RayTracing/RayTracingInOneWeekend/Camear.cpp
++++ b/RayTracing/RayTracingInOneWeekend/Camear.cpp
+@@ -35,4 +35,3 @@ Ray Camera::GetRay(double s, double t) const
+ 	);
+ }
+ 
+-
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/Camear.obj b/RayTracing/RayTracingInOneWeekend/Debug/Camear.obj
+index eafab09..cb36348 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/Camear.obj and b/RayTracing/RayTracingInOneWeekend/Debug/Camear.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/GetImage.obj b/RayTracing/RayTracingInOneWeekend/Debug/GetImage.obj
+index e5efabc..1a73c16 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/GetImage.obj and b/RayTracing/RayTracingInOneWeekend/Debug/GetImage.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/HitTableList.obj b/RayTracing/RayTracingInOneWeekend/Debug/HitTableList.obj
+index 06e7a9b..2e4f523 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/HitTableList.obj and b/RayTracing/RayTracingInOneWeekend/Debug/HitTableList.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/MathTest.obj b/RayTracing/RayTracingInOneWeekend/Debug/MathTest.obj
+index fa2240c..8aff8ac 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/MathTest.obj and b/RayTracing/RayTracingInOneWeekend/Debug/MathTest.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.command.1.tlog b/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.command.1.tlog
+index 19ba7a3..b11d69d 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.command.1.tlog and b/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.command.1.tlog differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.read.1.tlog b/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.read.1.tlog
+index 8944f10..58e82ee 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.read.1.tlog and b/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.read.1.tlog differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.write.1.tlog b/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.write.1.tlog
+index cabb7fd..ca26b03 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.write.1.tlog and b/RayTracing/RayTracingInOneWeekend/Debug/RayTraci.a7540548.tlog/CL.write.1.tlog differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.Build.CppClean.log b/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.Build.CppClean.log
+index 2fbc002..66013cf 100644
+--- a/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.Build.CppClean.log
++++ b/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.Build.CppClean.log
+@@ -1,19 +1,24 @@
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\vc142.pdb
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\vc142.idb
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\glad.obj
+-d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\vec3.obj
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\sphere.obj
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\ray.obj
+-d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\mathtest.obj
+-d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\main.obj
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\hittablelist.obj
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\hittable.obj
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\gluttest.obj
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\gltest.obj
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\getimage.obj
+-d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\gluttest.obj
+-d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\hittablelist.obj
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\vec3.obj
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\main.obj
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\mathtest.obj
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\camear.obj
+-d:\ashenoneproject\raytracing\raytracing\debug\raytracinginoneweekend.exe
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\material.obj
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\metal.obj
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\lambertian.obj
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\dielectric.obj
++d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\logger.obj
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\raytracinginoneweekend.ilk
++d:\ashenoneproject\raytracing\raytracing\debug\raytracinginoneweekend.exe
+ d:\ashenoneproject\raytracing\raytracing\debug\raytracinginoneweekend.pdb
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\raytraci.a7540548.tlog\cl.command.1.tlog
+ d:\ashenoneproject\raytracing\raytracing\raytracinginoneweekend\debug\raytraci.a7540548.tlog\cl.read.1.tlog
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.ilk b/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.ilk
+index f9d0c3e..5a6e999 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.ilk and b/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.ilk differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.log b/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.log
+index 391877c..9bbe8ab 100644
+--- a/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.log
++++ b/RayTracing/RayTracingInOneWeekend/Debug/RayTracingInOneWeekend.log
+@@ -1,3 +1,21 @@
+-﻿LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
++﻿  glad.c
++  Camear.cpp
++  Dielectric.cpp
++  GetImage.cpp
++  Gltest.cpp
++  Gluttest.cpp
++  Hittable.cpp
++  HitTableList.cpp
++  Lambertian.cpp
++  logger.cpp
++  main.cpp
++  material.cpp
++  MathTest.cpp
++  Metal.cpp
++  Ray.cpp
++  Sphere.cpp
++  Vec3.cpp
++  正在生成代码...
++LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+   RayTracingInOneWeekend.vcxproj -> D:\AshenOneProject\RayTracing\RayTracing\Debug\RayTracingInOneWeekend.exe
+   复制了 0 个文件
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/dielectric.obj b/RayTracing/RayTracingInOneWeekend/Debug/dielectric.obj
+index 972df71..f1c939e 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/dielectric.obj and b/RayTracing/RayTracingInOneWeekend/Debug/dielectric.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/glad.obj b/RayTracing/RayTracingInOneWeekend/Debug/glad.obj
+index 7f10603..e2cbff8 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/glad.obj and b/RayTracing/RayTracingInOneWeekend/Debug/glad.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/gltest.obj b/RayTracing/RayTracingInOneWeekend/Debug/gltest.obj
+index c322591..0433091 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/gltest.obj and b/RayTracing/RayTracingInOneWeekend/Debug/gltest.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/gluttest.obj b/RayTracing/RayTracingInOneWeekend/Debug/gluttest.obj
+index 2dfb9b4..e7369aa 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/gluttest.obj and b/RayTracing/RayTracingInOneWeekend/Debug/gluttest.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/hittable.obj b/RayTracing/RayTracingInOneWeekend/Debug/hittable.obj
+index fad0090..752624e 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/hittable.obj and b/RayTracing/RayTracingInOneWeekend/Debug/hittable.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/lambertian.obj b/RayTracing/RayTracingInOneWeekend/Debug/lambertian.obj
+index 159b806..b02c677 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/lambertian.obj and b/RayTracing/RayTracingInOneWeekend/Debug/lambertian.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/logger.obj b/RayTracing/RayTracingInOneWeekend/Debug/logger.obj
+index 3092766..0c3f3fd 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/logger.obj and b/RayTracing/RayTracingInOneWeekend/Debug/logger.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/main.obj b/RayTracing/RayTracingInOneWeekend/Debug/main.obj
+index 27fa039..a6e5a55 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/main.obj and b/RayTracing/RayTracingInOneWeekend/Debug/main.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/material.obj b/RayTracing/RayTracingInOneWeekend/Debug/material.obj
+index 3452f87..ab829f4 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/material.obj and b/RayTracing/RayTracingInOneWeekend/Debug/material.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/metal.obj b/RayTracing/RayTracingInOneWeekend/Debug/metal.obj
+index 55e37e2..fc810c3 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/metal.obj and b/RayTracing/RayTracingInOneWeekend/Debug/metal.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/ray.obj b/RayTracing/RayTracingInOneWeekend/Debug/ray.obj
+index 4bbfaa8..7e838a6 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/ray.obj and b/RayTracing/RayTracingInOneWeekend/Debug/ray.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/sphere.obj b/RayTracing/RayTracingInOneWeekend/Debug/sphere.obj
+index 36dfae7..73d1b62 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/sphere.obj and b/RayTracing/RayTracingInOneWeekend/Debug/sphere.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/vc142.idb b/RayTracing/RayTracingInOneWeekend/Debug/vc142.idb
+index c0b70e2..da80e30 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/vc142.idb and b/RayTracing/RayTracingInOneWeekend/Debug/vc142.idb differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/vc142.pdb b/RayTracing/RayTracingInOneWeekend/Debug/vc142.pdb
+index c5dc6bf..f035887 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/vc142.pdb and b/RayTracing/RayTracingInOneWeekend/Debug/vc142.pdb differ
+diff --git a/RayTracing/RayTracingInOneWeekend/Debug/vec3.obj b/RayTracing/RayTracingInOneWeekend/Debug/vec3.obj
+index d5b1a54..f4e3999 100644
+Binary files a/RayTracing/RayTracingInOneWeekend/Debug/vec3.obj and b/RayTracing/RayTracingInOneWeekend/Debug/vec3.obj differ
+diff --git a/RayTracing/RayTracingInOneWeekend/main.cpp b/RayTracing/RayTracingInOneWeekend/main.cpp
+index 034405d..d338489 100644
+--- a/RayTracing/RayTracingInOneWeekend/main.cpp
++++ b/RayTracing/RayTracingInOneWeekend/main.cpp
+@@ -127,6 +127,7 @@ HitTableList RandomScene() {
+ }
+ 
+ 
++
+ int main(int argc, char* argv[])
+ {
+ 	const auto aspectRatio = 16.0 / 9.0;
+diff --git a/RayTracing/RayTracingInOneWeekend/ray.h b/RayTracing/RayTracingInOneWeekend/ray.h
+index e47fb0d..49e0253 100644
+--- a/RayTracing/RayTracingInOneWeekend/ray.h
++++ b/RayTracing/RayTracingInOneWeekend/ray.h
+@@ -5,7 +5,7 @@ class Ray
+ {
+ public:
+ 	Ray() {};
+-	Ray(const point3& origin, const Vec3& direction) :orig(origin), dir(direction){}
++	Ray(const point3& origin, const Vec3& direction,double time = 0.0 ) :orig(origin), dir(direction),tm(time){}
+ 	point3 origin() const { return orig; }
+ 	Vec3 direction()const { return dir; }
+ 	
+@@ -16,4 +16,5 @@ public:
+ public:
+ 	point3 orig;
+ 	Vec3 dir;
++	double tm;
+ };

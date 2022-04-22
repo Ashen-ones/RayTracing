@@ -33,6 +33,13 @@ bool Sphere::Hit(const Ray& r, double tMin, double tMax, HitRecord& rec)const
 	rec.normal = (rec.p - center) / radius;
 	Vec3 outwardNormal = (rec.p - center) / radius;
 	rec.SetFaceNormal(r, outwardNormal);
-	rec.mat_ptr = mat_ptr;
+	GetSphereUv(outwardNormal, rec.u, rec.v);
+	rec.materialPtr = materialPtr;
+	return true;
+}
+
+bool Sphere::BoundingBox(double time0, double time1, AABB& output_box) const
+{
+	output_box = AABB(center - Vec3(radius, radius, radius),center+Vec3(radius,radius,radius));
 	return true;
 }

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\TextTure">
+      <UniqueIdentifier>{da15627a-2691-4480-ba19-ab68c8fe184e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -64,6 +67,57 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="logger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveSphere.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AABB.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BvhNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckerTexture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoiseTexture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageTexture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DiffuseLight.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="XYRect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="XZRect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="YZRect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Translate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RotateY.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantMedium.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Isotropic.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -119,5 +173,67 @@
     <ClInclude Include="logger.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MoveSphere.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BvhNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckerTexture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoiseTexture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageTexture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RT_stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DiffuseLight.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="XYRect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="XZRect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="YZRect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Translate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RotateY.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantMedium.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Isotropic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Source\1.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\Source\2.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

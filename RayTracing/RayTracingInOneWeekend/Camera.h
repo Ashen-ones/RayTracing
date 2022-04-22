@@ -3,22 +3,25 @@
 class Camera
 {
 public:
-	Camera(point3 lookfrom,
-		point3 lookat,
+	Camera(Point3 lookfrom,
+		Point3 lookat,
 		Vec3   vup,
 		double vfov, // vertical field-of-view in degrees
-		double aspect_ratio,
+		double aspectRatio,
 		double aperture,
-		double focus_dist);
+		double focusDist,
+		double _time0 = 0,
+		double _time1 = 0);
 	Ray GetRay(double u,double v)const;
 private:
-	point3 origin;
-	point3 lowerLeftCorner;
+	Point3 origin;
+	Point3 lowerLeftCorner;
 	Vec3 horizontal;
 	Vec3 vertical;
 
 	Vec3 u, v, w;
-	double lens_radius;
+	double lensRadius;
+	double time0, time1;
 
 };
 

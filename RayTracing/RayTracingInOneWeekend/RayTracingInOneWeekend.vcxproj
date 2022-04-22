@@ -91,13 +91,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\AshenOneProject\RayTracing\Third\use\glutdlls37beta;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\AshenOneProject\RayTracing\Third\use\stb;D:\AshenOneProject\RayTracing\Third\use\glutdlls37beta;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\AshenOneProject\RayTracing\Third\glutdlls37beta;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\AshenOneProject\RayTracing\Third\use\stb;D:\AshenOneProject\RayTracing\Third\glutdlls37beta;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y /d "..\..\Third\use\glutdlls37beta\glut32.dll" "$(OutDir)"</Command>
@@ -149,41 +149,80 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Third\use\glad\src\glad.c" />
+    <ClCompile Include="AABB.cpp" />
+    <ClCompile Include="Box.cpp" />
+    <ClCompile Include="BvhNode.cpp" />
     <ClCompile Include="Camear.cpp" />
+    <ClCompile Include="CheckerTexture.cpp" />
+    <ClCompile Include="ConstantMedium.cpp" />
     <ClCompile Include="Dielectric.cpp" />
+    <ClCompile Include="DiffuseLight.cpp" />
     <ClCompile Include="GetImage.cpp" />
     <ClCompile Include="Gltest.cpp" />
     <ClCompile Include="Gluttest.cpp" />
     <ClCompile Include="Hittable.cpp" />
     <ClCompile Include="HitTableList.cpp" />
+    <ClCompile Include="ImageTexture.cpp" />
+    <ClCompile Include="Isotropic.cpp" />
     <ClCompile Include="Lambertian.cpp" />
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="material.cpp" />
     <ClCompile Include="MathTest.cpp" />
     <ClCompile Include="Metal.cpp" />
+    <ClCompile Include="MoveSphere.cpp" />
+    <ClCompile Include="PerlinNoise.cpp" />
+    <ClCompile Include="PerlinNoiseTexture.cpp" />
     <ClCompile Include="Ray.cpp" />
+    <ClCompile Include="RotateY.cpp" />
     <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Translate.cpp" />
     <ClCompile Include="Vec3.cpp" />
+    <ClCompile Include="XYRect.cpp" />
+    <ClCompile Include="XZRect.cpp" />
+    <ClCompile Include="YZRect.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AABB.h" />
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="BvhNode.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="CheckerTexture.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="ConstantMedium.h" />
     <ClInclude Include="Dielectric.h" />
+    <ClInclude Include="DiffuseLight.h" />
     <ClInclude Include="GetImage.h" />
     <ClInclude Include="Gltest.h" />
     <ClInclude Include="Gluttest.h" />
     <ClInclude Include="Hittable.h" />
     <ClInclude Include="HitTableList.h" />
+    <ClInclude Include="ImageTexture.h" />
+    <ClInclude Include="Isotropic.h" />
     <ClInclude Include="Lambertian.h" />
     <ClInclude Include="logger.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="Metal.h" />
+    <ClInclude Include="MoveSphere.h" />
+    <ClInclude Include="PerlinNoise.h" />
+    <ClInclude Include="PerlinNoiseTexture.h" />
     <ClInclude Include="Ray.h" />
+    <ClInclude Include="RotateY.h" />
     <ClInclude Include="RTWeekend.h" />
+    <ClInclude Include="RT_stb_image.h" />
     <ClInclude Include="Sphere.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Translate.h" />
     <ClInclude Include="Vec3.h" />
     <ClInclude Include="MathTest.h" />
+    <ClInclude Include="XYRect.h" />
+    <ClInclude Include="XZRect.h" />
+    <ClInclude Include="YZRect.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Source\1.png" />
+    <Image Include="..\..\Source\2.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,8 +1,8 @@
 #include "Dielectric.h"
 
-bool Dielectric::Scatter(const Ray& r_in, const HitRecord& rec, color& attenuation, Ray& scattered) const
+bool Dielectric::Scatter(const Ray& r_in, const HitRecord& rec, Color& attenuation, Ray& scattered) const
 {
-		attenuation = color(1.0, 1.0, 1.0);
+		attenuation = Color(1.0, 1.0, 1.0);
 		double refraction_ratio = rec.front_face ? (1.0 / ir) : ir;
 
 		Vec3 unit_direction = unit_vector(r_in.direction());
@@ -18,6 +18,6 @@ bool Dielectric::Scatter(const Ray& r_in, const HitRecord& rec, color& attenuati
 		else
 			direction = refract(unit_direction, rec.normal, refraction_ratio);
 
-		scattered = Ray(rec.p, direction);
+		scattered = Ray(rec.p, direction,r_in.time());
 		return true;
 }
